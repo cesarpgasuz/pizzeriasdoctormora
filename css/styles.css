@@ -241,6 +241,10 @@ a:visited.boton-register{
 }
 
 
+.register img.girl{
+		width: 165px;
+	}
+
 .contacto{
 	width: 100%;
 	height: auto;
@@ -286,6 +290,11 @@ a:visited.boton-register{
 	width: 100%;
 	background: var(--azuls);
 }
+
+.banner-r .log img{
+	width: 150px;
+}
+
 .banner-r .information ul li{
 	line-height: 32px;
 	font-family: var(--fuentep);
@@ -398,7 +407,7 @@ h4.subtitles::before{
 	margin-bottom: 30px;
 	padding-left: 20px;
 	padding-right: 20px;
-	min-height: 180px;
+	min-height: 160px;
 	font-family: var(--fuentep);
 }
 .pizz .image{
@@ -409,7 +418,7 @@ h4.subtitles::before{
 	width: 35%;
 }
 .pizz .ingre{
-	margin-top: 50px;
+	margin-top: 40px;
 	width: 65%;
 }
 .pizz .ingre h5{
@@ -446,7 +455,7 @@ h4.subtitles::before{
 	position: relative;
 }
 .tarjet .content::before{
-	border-bottom: 2px dotted;
+	border-bottom: 2px dotted var(--grisf);
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -479,6 +488,24 @@ h4.subtitles::before{
 
 
 /* ----- responsive ------*/
+
+@media screen and (max-width: 1199px){
+	.tarjet{
+		padding-right: 30px;
+	}
+	.tarjet .content .body span.name {
+    	font-size: 18px;
+	}
+	.tarjet .content .body span.porcion{
+		font-size: 16px;
+	}
+	.tarjet .content span.price{
+		font-size: 24px;
+	}
+	
+}
+
+
 @media screen and (max-width: 991px){
 	.banner{
 		min-height: 250px;
@@ -491,6 +518,34 @@ h4.subtitles::before{
 	.register img.girl{
 		width: 115px;
 	}
+	
+	
+	
+	.banner-r .information ul li h2 {
+    	font-size: 28px;
+	}
+	.banner-r .log{
+		align-self: start;
+	}
+	.banner-r .log img{
+		width: auto;
+		margin-top: 35px;
+	}
+	
+	
+	
+	.tarjet .content .body span.name {
+    	font-size: 24px;
+	}
+	.tarjet .content .body span.porcion{
+		font-size: 18px;
+	}
+	.tarjet .content span.price{
+		font-size: 30px;
+	}
+	
+	
+	
 	
 }
 
@@ -524,6 +579,30 @@ h4.subtitles::before{
 	.register img.girl, .register img.boy{
 		display: none;
 	}
+	
+	.banner-r{
+		min-height: auto;
+		padding-top: 100px;
+		padding-bottom: 50px;
+	}
+	.banner-r .log img{
+		margin-top: 0px;
+	}
+	.banner-r .information{
+		padding-left: 25px;
+	}
+	.banner-r .information ul li h2{
+		margin-bottom: 0px;
+	}
+	.banner-r .horario{
+		display: none;
+	}
+	
+	
+	.pizz .image{
+		margin-right: 0px;
+	}
+	
 	
 }
 
@@ -578,6 +657,69 @@ h4.subtitles::before{
 	.boton-register{
 		font-size: 16px;
 	}
+	
+	
+	.banner-r {
+		padding-top: 60px;
+		padding-bottom: 20px;
+	}
+	.banner-r .log img {
+    	width: 50px;
+		margin-left: 30px;
+		margin-bottom: 30px;
+	}
+	
+	
+	.banner-r .information ul li h2 {
+		font-size: 24px;
+	}
+	
+	
+	h4.subtitles{
+		margin-bottom: 40px;
+	}
+	h4.subtitles::before{
+		content: "";
+	}
+	.pizz{
+		box-shadow: none;
+		border: 1px solid var(--grisb);
+		background: #FBFBFB;
+	}
+	.pizz .image{
+		width: 30%;
+	}
+	.pizz .ingre{
+		width: 70%;
+		padding-left: 5%;
+	}
+	.pady{
+		padding-top: 50px;
+	}
+	
+	.tamanos{
+		padding-bottom: 100px;
+	}
+	
+	.tarjet img{
+		display: none;
+	}
+	
+	.tarjet {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	
+	.tarjet .content .body span.name {
+    	font-size: 18px;
+	}
+	.tarjet .content .body span.porcion{
+		font-size: 14px;
+	}
+	.tarjet .content span.price{
+		font-size: 16px;
+	}
+	
 	
 }
 
