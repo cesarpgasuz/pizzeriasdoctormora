@@ -11,13 +11,71 @@
 	--grisf: #848484;
 	--grisb: #dddddd;
 	--fuentep: 'Poppins', sans-serif;
+	--marr: #D31F25;
 }
+
+
+.navv{
+	background: var(--azuls);
+	width: 100%;
+	height: auto;
+	position: relative;
+	position: fixed;
+	top: 0;
+	z-index: 5000;
+	display: flex;
+	align-items: center;
+	
+
+}
+
+.flot-reverse{
+	font-size: 32px;
+	color: var(--grisb);
+}
+.flot-reverse:hover{
+	cursor: pointer;
+}
+.azul{
+	color: var(--azulp);
+}
+
+.blanca{
+	background: #f9f9f9;
+	border-bottom: 1px solid #ececec;
+	transition: background 0.2s ease-out;
+	/*-webkit-box-shadow: 0px 10px 16px -8px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 10px 16px -8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 10px 16px -8px rgba(0, 0, 0, 0.1);
+	*/
+}
+
+.p-no {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: -2;
+	font-size: 18px;
+	line-height: 45px;
+	display: none;
+	font-family: var(--fuentep);
+	color: var(--azulp);
+	font-weight: 600;
+	font-style: italic;
+}
+.visible{
+	display: block;
+}
+
+
 
 
 .banner{
 	width: 100%;
 	min-height: 400px;
-	background: url(../images/pizza.jpg) center center no-repeat;
+	background: url(../images/pizza_b.jpg) center center no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -52,16 +110,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a191f', end
 .banner .content h1{
 	color: #fff;
 	font-family: var(--fuentep);
+	text-transform: uppercase;
+	font-size: 38px;
 }
-.banner .content h1 span:nth-child(1){
+.banner .content h1 span.pizzerias{
 	font-size: 60px;
 	font-weight: 700;
 	font-style: italic;
-	text-transform: uppercase;
+	
 }
-.banner .content h1 span:nth-child(2){
-	font-size: 38px;
-	text-transform: uppercase;
+.banner .content h1 span.doctor{
 	font-weight: 400;
 }
 .banner .content p{
@@ -221,4 +279,336 @@ a:visited.boton-register{
 	margin-bottom: 0px;
 }
 
+
+/* --- template ---- */
+.banner-r{
+	min-height: 450px;
+	width: 100%;
+	background: var(--azuls);
+}
+.banner-r .information ul li{
+	line-height: 32px;
+	font-family: var(--fuentep);
+	color: var(--grisf);
+	font-size: 16px;
+	font-weight: 400;
+}
+.banner-r .information ul li h2{
+	font-size: 32px;
+	color: var(--grisb);
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.banner-r .information ul li.tel{
+	color: greenyellow;
+	margin-bottom: 20px;
+}
+.banner-r .information ul li.tel a:link{
+	color: greenyellow;
+	text-decoration: none;
+}
+.banner-r .information ul li.tel a:visited{
+	color: greenyellow;
+	text-decoration: none;
+}
+
+a:visited.boton-promo{
+	color: #fff;
+}
+a:link.boton-promo{
+	background: #FF2F2B;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	font-family: var(--fuentep);
+	border-radius: 50px;
+	padding: 4px 30px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.banner-r .horario{
+	background: var(--azulp);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	padding: 25px 0px;
+	font-display: var(--fuentep);
+	border-radius: 10px;
+}
+.banner-r .horario .content h4{
+	font-size: 24px;
+	color: yellow;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+.banner-r .horario .content ul li{
+	line-height: 35px;
+	font-size: 16px;
+	color: var(--grisf);
+}
+.banner-r .horario .content ul li.day{
+	color: var(--grisb);
+	font-weight: 600;
+}
+
+
+.pady{
+	padding-top: 100px;
+}
+
+h4.subtitles{
+	font-size: 36px;
+	font-weight: 700;
+	font-style: italic;
+	color: var(--naranjap);
+	font-family: var(--fuentep);
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+	margin-bottom: 80px;
+}
+h4.subtitles::before{
+	content: attr(data-heading);
+	font-family: var(--fuentep);
+	color: var(--grisb);
+	font-size: 100px;
+	font-weight: 700;
+	font-style: italic;
+	position: absolute;
+	line-height: 36px;
+	left: 0;
+	right: 0;
+	display: block;
+	z-index: -1;
+	text-transform: uppercase;
+	opacity: 25%;
+}
+
+
+.pizz{
+	width: 100%;
+	-webkit-box-shadow: 0px 0px 40px 0px rgba(194,194,194,1);
+	-moz-box-shadow: 0px 0px 40px 0px rgba(194,194,194,1);
+	box-shadow: 0px 0px 40px 0px rgba(194,194,194,1);
+	border-radius: 5px;
+	display: flex;
+	margin-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	min-height: 180px;
+	font-family: var(--fuentep);
+}
+.pizz .image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 20px;
+	width: 35%;
+}
+.pizz .ingre{
+	margin-top: 50px;
+	width: 65%;
+}
+.pizz .ingre h5{
+	font-size: 18px;
+	color: var(--marr);
+	font-weight: 600;
+	text-transform: uppercase;
+	
+}
+.pizz .ingre p{
+	font-size: 14px;
+	color: var(--textf);
+	line-height: 25px;
+}
+.tamanos{
+	width: 100%;
+	height: auto;
+	padding-bottom: 200px;
+}
+.tarjet{
+	display: flex;
+	margin-bottom: 30px;
+	padding-right: 60px;
+	font-family: var(--fuentep);
+}
+.tarjet img{
+	margin-right: 20px;
+}
+.tarjet .content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	position: relative;
+}
+.tarjet .content::before{
+	border-bottom: 2px dotted;
+	content: "";
+	position: absolute;
+	width: 100%;
+	margin-top: 15px;
+	z-index: -1;
+}
+.tarjet .content .body{
+	background: #fff;
+}
+.tarjet .content .body span.name{
+	font-size: 24px;
+	font-weight: 700;
+	font-style: italic;
+	color: var(--marr);
+}
+.tarjet .content .body span.porcion{
+	color: #000;
+	font-weight: 700;
+	font-size: 18px;
+	font-style: italic;
+}
+.tarjet .content span.price{
+	font-size: 30px;
+	color: var(--cyans);
+	font-weight: 700;
+	font-style: italic;
+	background: #fff;
+}
+
+
+
+/* ----- responsive ------*/
+@media screen and (max-width: 991px){
+	.banner{
+		min-height: 250px;
+	}
+	
+	
+	.register{
+		background: none;
+	}
+	.register img.girl{
+		width: 115px;
+	}
+	
+}
+
+
+
+
+@media screen and (max-width: 767px){
+	
+	.banner .content h1{
+		font-size: 24px;
+	}
+	.banner .content h1 span.pizzerias{
+		font-size: 48px;
+	}
+
+	.banner .content p {
+    	font-size: 16px;
+	}
+	
+	.rest{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	
+	.tarjeta .imagen img{
+		width: 80px;
+	}
+	.tarjeta .contenido ul li h5 {
+    	font-size: 24px;
+	}
+	.register img.girl, .register img.boy{
+		display: none;
+	}
+	
+}
+
+
+
+
+@media screen and (max-width: 575px){
+	.banner{
+		min-height: 180px;
+	}
+	
+	.banner .content h1{
+		font-size: 20px;
+	}
+	.banner .content h1 span.pizzerias{
+		font-size: 32px;
+	}
+	
+	
+	.banner .content p {
+    	font-size: 12px;
+		margin-right: 40%;
+	}
+	
+	
+	.tarjeta{
+		padding: 25px;
+		box-shadow: none;
+		border: 1px solid var(--grisb);
+		background: #FBFBFB;
+	}
+	.tarjeta .imagen img {
+		width: 60px;
+	}
+	.tarjeta .contenido ul li h5 {
+		font-size: 18px;
+	}
+	.tarjeta .contenido ul li{
+		font-size: 14px;
+	}
+	
+	.register{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.register .contenido h3 {
+    	font-size: 24px
+	}
+	.register .contenido p{
+		font-size: 14px;
+	}
+	.boton-register{
+		font-size: 16px;
+	}
+	
+}
+
+
+@media screen and (max-width: 490px){
+	.tarjeta {
+		padding: 15px;
+		margin-bottom: 30px;
+	}
+	.tarjeta .imagen {
+		margin-right: 10px;
+		align-self: start;
+	}
+	.tarjeta .imagen img {
+		width: 30px;
+	}
+	.tarjeta .contenido ul li{
+		line-height: 25px;
+	}
+	.boton-menu{
+		font-size: 12px;
+	}
+	
+}
+
+
+
+@media screen and (max-width: 384px){
+	h4.subtitles::before{
+		content: "";
+	}
+	
+}
 
