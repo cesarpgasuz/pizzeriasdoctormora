@@ -15,3 +15,25 @@ var tope = $('.banner-r').innerHeight();
 					$('.p-no').removeClass('visible');
 				}
 			});
+
+
+
+
+
+$('#horario').on('click', function(){
+	$('.modall').toggleClass('visible');
+	$('body').toggleClass('scroll');
+	$('.sombra').toggleClass('visible-som');
+})
+
+$('.sombra').on('click', function(){
+	$('.modall').removeClass('visible');
+	$('body').removeClass('scroll');
+	$('.sombra').removeClass('visible-som');
+})
+
+$('#closeH').on('click', function(){
+	$('.modall').removeClass('visible');
+	$('body').removeClass('scroll');
+	$('.sombra').removeClass('visible-som');
+})
