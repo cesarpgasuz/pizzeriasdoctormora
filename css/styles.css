@@ -178,13 +178,13 @@
 	left: 0;
 	top: 0;
 	background: rgba(10,25,31,1);
-background: -moz-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(10,25,31,1)), color-stop(100%, rgba(255,255,255,0)));
-background: -webkit-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
-background: -o-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
-background: -ms-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
-background: linear-gradient(to right, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a191f', endColorstr='#ffffff', GradientType=1 );
+	background: -moz-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(10,25,31,1)), color-stop(100%, rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(left, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(to right, rgba(10,25,31,1) 0%, rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a191f', endColorstr='#ffffff', GradientType=1 );
 }
 .banner .content{
 	z-index: 5;
@@ -214,7 +214,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a191f', end
 	font-family: var(--fuentep);
 	font-weight: 400;
 }
-
+.banner img.pana{
+	display: none;
+}
 
 .rest{
 	height: auto;
@@ -706,6 +708,18 @@ h4.subtitles::before{
 @media screen and (max-width: 575px){
 	.banner{
 		min-height: 180px;
+		background: var(--azuls);
+	}
+	.banner::before{
+		display: none;
+	}
+	
+	.banner img.pana{
+		display: block;
+		width: 120px;
+		position: absolute;
+		right: 10%;
+		bottom: 0;
 	}
 	
 	.banner .content h1{
@@ -819,6 +833,11 @@ h4.subtitles::before{
 
 
 @media screen and (max-width: 490px){
+	
+	.banner img.pana{
+		right: 5%;
+	}
+	
 	.tarjeta {
 		padding: 15px;
 		margin-bottom: 30px;
@@ -848,3 +867,8 @@ h4.subtitles::before{
 	
 }
 
+@media screen and (max-width: 344px){
+	.banner img.pana{
+		width: 80px;
+	}
+}
