@@ -31,7 +31,7 @@
 	"description" : "Encuentra las Mejores Pizzerias de Doctor Mora",
 	"start_url" : "./",
 	"scope" : "./",
-	"display" : "standalone",
+	"display" : "minimal-ui",
 	"orientation" : "portrait",
 	"lang" : "es-MX",
 	"background_color" : "#ffffff",

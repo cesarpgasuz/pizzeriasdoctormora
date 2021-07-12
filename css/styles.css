@@ -14,7 +14,9 @@
 	--marr: #D31F25;
 }
 
-
+.disable{
+	display: none;
+}
 .scroll{
 	overflow: hidden;
 }
@@ -31,10 +33,10 @@
 
 .modall {
 	position: fixed;
-	height: 70vh;
+	height: 80vh;
 	width: 100%;
 	background: #f2f2f2;
-	bottom: -70vh;
+	bottom: -80vh;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	z-index: 400;
@@ -237,6 +239,7 @@
 }
 .tarjeta .imagen{
 	margin-right: 50px;
+	flex-shrink: 0;
 }
 .tarjeta .contenido ul{
 	margin-bottom: 0;
@@ -380,8 +383,9 @@ a:visited.boton-register{
 	position: relative;
 }
 
-.banner-r .log img{
-	width: 150px;
+.banner-r .information img.log{
+	width: 100px;
+	margin-bottom: 15px;
 }
 
 .banner-r .information ul li{
@@ -432,15 +436,18 @@ a:link.boton-promo{
 	align-items: center;
 	width: 100%;
 	height: auto;
-	padding: 25px 0px;
-	font-display: var(--fuentep);
+	padding: 25px;
+	font-family: var(--fuentep);
 	border-radius: 10px;
 }
 .banner-r .horario .content h4{
 	font-size: 24px;
 	color: yellow;
-	margin-bottom: 20px;
+	margin-top: 10px;
 	font-weight: 600;
+}
+.banner-r .horario .content ul{
+	margin-bottom: 0px;
 }
 .banner-r .horario .content ul li{
 	line-height: 35px;
@@ -575,7 +582,47 @@ h4.subtitles::before{
 }
 
 
+.relleno h5{
+	font-size: 24px;
+	font-family: var(--fuentep);
+	color: var(--azulp);
+	font-weight: 700;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	font-style: italic;
+}
 
+.extra{
+	padding-top: 60px;
+}
+.extra .content{
+	background: #f4f4f4;
+	display: flex;
+	padding: 20px 10px;
+	justify-content: space-evenly;
+	width: 100%;
+	border-radius: 5px;
+}
+.extra h5{
+	font-size: 18px;
+	font-family: var(--fuentep);
+	color: var(--azulp);
+	font-weight: 700;
+	text-align: center;
+	margin: 10px 0px;
+	font-style: italic;
+}
+.extra .content h6{
+	margin-bottom: 0px;
+	font-size: 18px;
+	font-family: var(--fuentep);
+	color: var(--azulp);
+	font-weight: 600;
+}
+.extra .content h6 span{
+	color: var(--naranjap);
+}
 /* ----- responsive ------*/
 
 @media screen and (max-width: 1199px){
@@ -612,13 +659,6 @@ h4.subtitles::before{
 	
 	.banner-r .information ul li h2 {
     	font-size: 28px;
-	}
-	.banner-r .log{
-		align-self: start;
-	}
-	.banner-r .log img{
-		width: auto;
-		margin-top: 35px;
 	}
 	
 	
@@ -681,9 +721,11 @@ h4.subtitles::before{
 		padding-top: 100px;
 		padding-bottom: 50px;
 	}
-	.banner-r .log img{
-		margin-top: 0px;
+	
+	.banner-r .information img.log {
+    	width: 70px;
 	}
+	
 	.banner-r .information{
 		padding-left: 25px;
 	}
@@ -771,10 +813,8 @@ h4.subtitles::before{
 		padding-top: 60px;
 		padding-bottom: 20px;
 	}
-	.banner-r .log img {
+	.banner-r .information img.log {
     	width: 50px;
-		margin-left: 30px;
-		margin-bottom: 30px;
 	}
 	
 	
@@ -826,6 +866,17 @@ h4.subtitles::before{
 	}
 	.tarjet .content span.price{
 		font-size: 16px;
+	}
+	
+	
+	.extra .content{
+		flex-direction: column;
+		align-items: center;
+		padding: 10px 0;
+	}
+	.extra .content h6{
+		margin: 10px 0px;
+		font-size: 14px;
 	}
 	
 	
